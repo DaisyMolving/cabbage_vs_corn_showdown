@@ -1,15 +1,15 @@
 $(document).ready(function(){
 
-var turn = "x";
+var turn = -1;
 
 
 $(".gridBox").on('click', function(){
-    if (turn === "x") {
+    if (turn === -1) {
       $(this).css("background-image", "url(O.png)");
-      turn = "o"; 
+      turn = 1; 
     } else {
       $(this).css("background-image", "url(X.png)");
-      turn = "x";
+      turn = -1;
     }
 })
 
