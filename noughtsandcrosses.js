@@ -1,26 +1,27 @@
 $(document).ready(function(){
 
-// var playerTwo = 0;
-var playerOne = function(){
-  prompt("Would you like to be noughts or crosses? (The computer will randomly select who starts)");
-   if (playerOne === "crosses") {
-    console.log("crosses");
-   } else if (playerOne === "noughts") {
-    console.log("noughts");
-   }
-};
+var turn = true;
+var board = ["","","","","","","","",""]; {
+  $("#one") = board[0]
+  
+}
+
+$(".gridBox").on('click', function(){
+    if (turn === true) {
+      $(this).css("background-color", "red");
+      turn = false; 
+    } else {
+      $(this).css("background-color", "blue");
+      turn = true;
+    }
+})
 
 
-var xTurn
-var oTurn
 
-var board = [[1,2,3],[4,5,6],[7,8,9]];
+
 
 var cross = -1;
 var nought = 1;
 
-$(".gridBox").on('click', function(){
-    $(this).css("background-color", "red");
-})
 
 });
