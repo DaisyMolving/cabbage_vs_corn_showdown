@@ -1,4 +1,8 @@
-document.ready(function(){
+$(document).ready(function(){
+
+$(".gridBox").on('click', function(){
+    $(this).css("background-color", "red");
+})
 
 var xTurn
 var oTurn
