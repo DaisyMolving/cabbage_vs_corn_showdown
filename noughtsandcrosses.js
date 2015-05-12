@@ -1,27 +1,28 @@
 $(document).ready(function(){
 
-var turn = true;
+var turn = "x";
 
 
 $(".gridBox").on('click', function(){
-    if (turn === true) {
+    if (turn === "x") {
       $(this).css("background-color", "red");
-      turn = false; 
+      turn = "o"; 
     } else {
       $(this).css("background-color", "blue");
-      turn = true;
+      turn = "x";
     }
 })
 
 var board = ["0","1","2","3","4","5","6","7","8"]; 
 
 
-
   $("#one").on('click', function(){
-    console.log(board[0]);
+    board[0] = turn;
+    console.log(board);
   }); 
   $("#two").on('click', function(){
-    console.log(board[1]);
+    board[1] = turn;
+    console.log(board);
   });
   $("#three").on('click', function(){
     console.log(board[2]);
