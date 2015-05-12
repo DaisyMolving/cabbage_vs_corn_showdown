@@ -5,56 +5,67 @@ var turn = "x";
 
 $(".gridBox").on('click', function(){
     if (turn === "x") {
-      $(this).css("background-color", "red");
+      $(this).css("background-image", "url(O.png)");
       turn = "o"; 
     } else {
-      $(this).css("background-color", "blue");
+      $(this).css("background-image", "url(X.png)");
       turn = "x";
     }
 })
 
-var board = ["0","1","2","3","4","5","6","7","8"]; 
+var gridPosition = ["","","","","","","","",""]; 
 
 
   $("#one").on('click', function(){
-    board[0] = turn;
-    console.log(board);
+    gridPosition[0] = turn;
+    console.log(gridPosition);
   }); 
   $("#two").on('click', function(){
-    board[1] = turn;
-    console.log(board);
+    gridPosition[1] = turn;
+    console.log(gridPosition);
   });
   $("#three").on('click', function(){
-    console.log(board[2]);
+    gridPosition[2] = turn;
+    console.log(gridPosition);
   });
   $("#four").on('click', function(){
-    console.log(board[3]);
+    gridPosition[3] = turn;
+    console.log(gridPosition);
   });  
   $("#five").on('click', function(){
-    console.log(board[4]);
+    gridPosition[4] = turn;
+    console.log(gridPosition);
   });
   $("#six").on('click', function(){
-    console.log(board[5]);
+    gridPosition[5] = turn;
+    console.log(gridPosition);
   });
   $("#seven").on('click', function(){
-    console.log(board[6]);
+    gridPosition[6] = turn;
+    console.log(gridPosition);
   });
   $("#eight").on('click', function(){
-    console.log(board[7]);
+    gridPosition[7] = turn;
+    console.log(gridPosition);
   });
   $("#nine").on('click', function(){
-    console.log(board[8]);
+    gridPosition[8] = turn;
+    console.log(gridPosition);
   });
 
+var winnerX = function(){
+  if (board[] && board[] 
+
+}
 
 //winning array combos:
-[0, 1, 2]
-[3, 4, 5]
-[6, 7, 8]
-[0, 3, 6]
-[1, 4, 7]
-[2, 5, 8]
-[0, 4, 8]
-[6, 4, 2]
+// [0, 1, 2]
+// [3, 4, 5]
+// [6, 7, 8]
+// [0, 3, 6]
+// [1, 4, 7]
+// [2, 5, 8]
+// [0, 4, 8]
+// [6, 4, 2]
 
 });
