@@ -1,7 +1,7 @@
 .gridBox {
   height: 100px;
   width: 100px;
-  border-color: red;
+  background-color: orange;
   font-size: 100px;
   text-align: center;
 }
