@@ -54,7 +54,9 @@ var gridPosition = ["","","","","","","","",""];
   });
 
 var winnerX = function(){
-  if (board[] && board[] 
+  if (board[0] && board[1] && board[2] === "x" || board[3] && board[4] && board[5] === "x" || board[6] && board[7] && board[8] === "x" || board[0] && board[3] && board[6] === "x" || board[1] && board[4] && board[7] === "x" || board[2] && board[5] && board[8] === "x" || board[0] && board[4] && board[8] === "x" || board[6] && board[4] && board[2] === "x") {
+    console.log("x wins")
+  }
 
 }
 
