@@ -13,53 +13,92 @@ $(".gridBox").on('click', function(){
     }
 })
 
-var gridPosition = ["","","","","","","","",""]; 
-
+var gridPosition = [0,0,0,0,0,0,0,0,0]; 
 
   $("#one").on('click', function(){
     gridPosition[0] = turn;
     console.log(gridPosition);
+    winnerTest();
   }); 
   $("#two").on('click', function(){
     gridPosition[1] = turn;
     console.log(gridPosition);
+    winnerTest();
   });
   $("#three").on('click', function(){
     gridPosition[2] = turn;
     console.log(gridPosition);
+    winnerTest();
   });
   $("#four").on('click', function(){
     gridPosition[3] = turn;
     console.log(gridPosition);
+    winnerTest();
   });  
   $("#five").on('click', function(){
     gridPosition[4] = turn;
     console.log(gridPosition);
+    winnerTest();
   });
   $("#six").on('click', function(){
     gridPosition[5] = turn;
     console.log(gridPosition);
+    winnerTest();
   });
   $("#seven").on('click', function(){
     gridPosition[6] = turn;
     console.log(gridPosition);
+    winnerTest();
   });
   $("#eight").on('click', function(){
     gridPosition[7] = turn;
     console.log(gridPosition);
+    winnerTest();
   });
   $("#nine").on('click', function(){
     gridPosition[8] = turn;
     console.log(gridPosition);
+    winnerTest();
   });
 
-var winnerX = function(){
-  if (board[0] && board[1] && board[2] === "x" || board[3] && board[4] && board[5] === "x" || board[6] && board[7] && board[8] === "x" || board[0] && board[3] && board[6] === "x" || board[1] && board[4] && board[7] === "x" || board[2] && board[5] && board[8] === "x" || board[0] && board[4] && board[8] === "x" || board[6] && board[4] && board[2] === "x") {
-    console.log("x wins")
-  }
+// horizontalTop = [gridPosition[0], gridPosition[1], gridPosition[2]];
+// horizontalMiddle = [gridPosition[3], gridPosition[4], gridPosition[5]];
+// horizontalBottom = [gridPosition[6], gridPosition[7], gridPosition[8]];
+// verticalLeft = [gridPosition[0], gridPosition[3], gridPosition[6]];
+// verticalMiddle = [gridPosition[1], gridPosition[4], gridPosition[7]];
+// verticalRight = [gridPosition[2], gridPosition[5], gridPosition[8]];
+// diagonalLeftTop = [gridPosition[0], gridPosition[4], gridPosition[8]];
+// diagonalRightTop = [gridPosition[2], gridPosition[4], gridPosition[6]];
 
+var threeInRow = [[gridPosition[0], gridPosition[1], gridPosition[2]], 
+                  [gridPosition[3], gridPosition[4], gridPosition[5]], 
+                  [gridPosition[6], gridPosition[7], gridPosition[8]], 
+                  [gridPosition[0], gridPosition[3], gridPosition[6]], 
+                  [gridPosition[1], gridPosition[4], gridPosition[7]], 
+                  [gridPosition[2], gridPosition[5], gridPosition[8]], 
+                  [gridPosition[0], gridPosition[4], gridPosition[8]], 
+                  [gridPosition[2], gridPosition[4], gridPosition[6]]];
+
+// threeInRow[0].reduce(function(a, b) {
+//     return parseInt(a, 10) + parseInt(b, 10);
+// })
+
+function winnerTest(){
+threeInRow.some(function(element, i){
+  console.log(element);
+   var sum = threeInRow[i].reduce(function(a, b) {
+      console.log(a+b);
+      return (a+b);
+  });
+   //console.log(sum);
+   // this.val() === -3)) { 
+    // console.log("x wins");
+}); 
 }
 
+  // else if (threeInRow === 3) {
+  //   console.log("o wins");
+  // }
 //winning array combos:
 // [0, 1, 2]
 // [3, 4, 5]
