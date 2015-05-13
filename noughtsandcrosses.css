@@ -1,9 +1,33 @@
+.container {
+  text-align: center;
+}
+
 .gridBox {
-  height: 100px;
-  width: 100px;
+  height: 140px;
+  width: 140px;
   background-color: orange;
   font-size: 100px;
   text-align: center;
-  border: none;
   box-shadow: none;
+  border: none;
+  background-position: center;
+  margin: 5px;
+}
+
+h1 {
+  font-family: 'PT Sans', sans-serif;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'PT Sans', sans-serif;
+  text-align: center;
+}
+
+body {
+  background-image: url(spade_and_rake.png);
+  background-repeat: repeat;
+  background-color: rgb(101,196,52);
 }
