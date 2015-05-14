@@ -95,13 +95,25 @@ function winnerTest(){
 
 
 function openDialogCabbage(){
-  $("#cabbageWins").dialog({
-    height: 250
-  });
   $( "#cabbageWins" ).dialog({
+  dialogClass: "no-close",
+  buttons: [
+    {
+      text: "OK",
+      click: function() {
+        $( this ).dialog( "close" );
+      }
+    }
+  ]
+});
+  $("#cabbageWins").dialog({
+    height: 250 
+  });
+  $("#cabbageWins").dialog({
   buttons: [
     {
       text: "PLAY AGAIN?",
+      "class": 'againButtonClass',
       click: function() {
         $( this ).dialog( "close");
     }
@@ -111,18 +123,35 @@ function openDialogCabbage(){
    $( "#cabbageWins" ).dialog({
   modal: true
 });
+    $( "#cabbageWins" ).dialog({
+  close: function(event, ui) {
+      window.location.reload();
+  }
+});
 }
 
 // var openDialogCorn = $( ".cornWins" ).dialog( "option", "modal" );
 
 function openDialogCorn(){
+  $( "#cornWins" ).dialog({
+  dialogClass: "no-close",
+  buttons: [
+    {
+      text: "OK",
+      click: function() {
+        $( this ).dialog( "close" );
+      }
+    }
+  ]
+});
   $("#cornWins").dialog({
-    height: 300
+    height: 250
   });
   $( "#cornWins" ).dialog({
   buttons: [
     {
       text: "PLAY AGAIN?",
+      "class": 'againButtonClass',
       click: function() {
         $( this ).dialog( "close");
     } 
@@ -131,6 +160,11 @@ function openDialogCorn(){
 });
    $( "#cornWins" ).dialog({
   modal: true
+});
+     $( "#cornWins" ).dialog({
+  close: function(event, ui) {
+      window.location.reload();
+  }
 });
 }
 
@@ -145,13 +179,25 @@ function openDialogCorn(){
   }); 
 
 function openDialogDraw(){
-  $("#noOneWins").dialog({
-    height: 300
-  });
   $( "#noOneWins" ).dialog({
+  dialogClass: "no-close",
   buttons: [
     {
+      text: "OK",
+      click: function() {
+        $( this ).dialog( "close" );
+      }
+    }
+  ]
+});
+  $("#noOneWins").dialog({
+    height: 250
+  });
+  $( "#noOneWins" ).dialog({
+    buttons: [
+    {
       text: "PLAY AGAIN?",
+      "class": 'againButtonClass',
       click: function() {
         $( this ).dialog( "close");
     } 
@@ -160,6 +206,11 @@ function openDialogDraw(){
 });
   $( "#noOneWins" ).dialog({
   modal: true
+});
+  $( "#noOneWins" ).dialog({
+  close: function(event, ui) {
+      window.location.reload();
+  }
 });
 }
   if (numberOfTurns === 9 && sum !== 3 && sum !== -3) {
