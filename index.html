@@ -3,13 +3,16 @@
 <head>
   <title>Noughts and Crosses</title>
   <script src="jQuery-2.1.4.js"></script>
+  <script type="jQuery-ui-1.11.4.js"></script>
   <script src="noughtsandcrosses.js"></script>
   <link rel="stylesheet" type="text/css" href="noughtsandcrosses.css">
   <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<h1>CABBAGE VERSUS CORN SHOWDOWN</h1>
-<h2> (Where cabbage, the less popular vegetable, starts)</h2>
+  <div class="container">
+    <h1>CABBAGE VERSUS CORN SHOWDOWN</h1>
+    <h2> (Where cabbage, the less popular vegetable, starts)</h2>
+  </div>
   <!-- <div class="playerInputs">
     <div class="playerOneInput">
       <h2>PLAYER ONE WOULD LIKE TO BE (O or X):</h2>
@@ -24,12 +27,7 @@
       <p></p>
     </div>
   </div> -->
-  <dialog>
-    <p>CABBAGE WINS! Corn, you got cole-slawtered</p>
-  </dialog>
-  <dialog>
-    <p>CORN WINS! Cabbage, looks like you are going through a bad patch</p>
-  </dialog>
+  
 
   <div class="container">
     <div class="firstRow">
@@ -48,6 +46,12 @@
     </div>
   </div>
   
+  <dialog class="cabbageWins">
+      <p>CABBAGE WINS! Corn, you got cole-slawtered</p>
+    </dialog>
+    <dialog class="cornWins">
+      <p>CORN WINS! Cabbage, looks like you are going through a bad patch</p> 
+    </dialog>  
 
 </body>
 </html>

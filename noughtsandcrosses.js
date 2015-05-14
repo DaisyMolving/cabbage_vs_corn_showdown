@@ -13,7 +13,7 @@ $(".gridBox").on('click', function(){
     }
 })
 
-var gridPosition = [0,0,0,0,0,0,0,0,0]; 
+var gridPosition = ["","","","","","","","",""]; 
 
   $("#one").on('click', function(){
     gridPosition[0] = turn;
@@ -61,6 +61,17 @@ var gridPosition = [0,0,0,0,0,0,0,0,0];
     winnerTest();
   });
 
+function drawTest() {
+  gridPosition(function(element, i){
+     var sumOfAll = element.reduce(function(a, b) {
+        console.log(sumOfAll)
+        return (a+b);
+    });
+
+});
+}
+
+
 // horizontalTop = [gridPosition[0], gridPosition[1], gridPosition[2]];
 // horizontalMiddle = [gridPosition[3], gridPosition[4], gridPosition[5]];
 // horizontalBottom = [gridPosition[6], gridPosition[7], gridPosition[8]];
@@ -76,6 +87,10 @@ var gridPosition = [0,0,0,0,0,0,0,0,0];
 //     return parseInt(a, 10) + parseInt(b, 10);
 // })
 
+// function openDialogCabbage () {
+//   $(".cabbageWins").dialog.open();
+// }
+
 function winnerTest(){
   var threeInRow = [[gridPosition[0], gridPosition[1], gridPosition[2]], 
                   [gridPosition[3], gridPosition[4], gridPosition[5]], 
@@ -86,17 +101,17 @@ function winnerTest(){
                   [gridPosition[0], gridPosition[4], gridPosition[8]], 
                   [gridPosition[2], gridPosition[4], gridPosition[6]]];
   threeInRow.forEach(function(element, i){
-  
-    console.log(element);
      var sum = element.reduce(function(a, b) {
         console.log(a+b);
         return (a+b);
     });
 
      if (sum === 3){
-      $(".cabbageWins").dialog.open();
+      alert("CABBAGE WINS! Corn, you got cole-slawtered")
      } else if (sum === -3){
-      $(".cornWins").dialog.open();
+      alert("CORN WINS! Cabbage, looks like you are going through a bad patch")
+     } else if (sumOfAll === 1) {
+      alert("nobody has won");
      }
      //console.log(sum);
      // this.val() === -3)) { 

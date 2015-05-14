@@ -16,14 +16,30 @@
 
 h1 {
   font-family: 'PT Sans', sans-serif;
-  color: white;
+  color: orange;
   font-size: 50px;
   text-align: center;
+  background-color: rgba(72,174,35,0.75);
+  display: inline-block;
+  text-shadow:1px 1px 0 #fff,
+-1px -1px 0 #fff,
+1px -1px 0 #fff,
+-1px 1px 0 #fff,
+0px 1px 0 #fff,
+1px 0px 0 #fff,
+0px -1px 0 #fff,
+-1px 0px 0 #fff,
+4px 4px 3px #000;
+margin: 5px;
+width: 860px;
 }
 
 h2 {
   font-family: 'PT Sans', sans-serif;
   text-align: center;
+  background-color: rgba(253,164,30,0.5);
+  display: inline-block;
+  text-shadow:0px 0px 10px orange;
 }
 
 body {
