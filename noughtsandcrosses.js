@@ -94,9 +94,9 @@ function winnerTest(){
     });
 
      if (sum === 3){
-      alert("CABBAGE WINS! Corn, you got cole-slawtered");
+      $(".cabbageWins").dialog.open();
      } else if (sum === -3){
-      alert("CORN WINS! Cabbage, looks like you are going through a bad patch");
+      $(".cornWins").dialog.open();
      }
      //console.log(sum);
      // this.val() === -3)) { 
