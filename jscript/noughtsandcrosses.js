@@ -7,10 +7,10 @@ var numberOfTurns = 0;
 
 $(".gridBox").on('click', function(){
     if (turn === -1) {
-      $(this).css("background-image", "url(images/cabbage.png)");
+      $(this).css("background-image", "url(cabbage.png)");
       turn = 1; 
     } else {
-      $(this).css("background-image", "url(images/corn.png)");
+      $(this).css("background-image", "url(corn.png)");
       turn = -1;
     }
 })
