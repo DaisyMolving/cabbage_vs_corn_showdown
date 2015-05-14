@@ -1,57 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Noughts and Crosses</title>
-  <script src="jQuery-2.1.4.js"></script>
-  <script src="jQuery-ui-1.11.4.js"></script>
-  <script src="noughtsandcrosses.js"></script>
-  <link rel="stylesheet" type="text/css" href="noughtsandcrosses.css">
-  <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
-</head>
-<body>
-  <div class="containerOne">
-    <h1>CABBAGE VERSUS CORN SHOWDOWN</h1>
-    <h2> (Where cabbage, the less popular vegetable, starts)</h2>
-  </div>
-  <!-- <div class="playerInputs">
-    <div class="playerOneInput">
-      <h2>PLAYER ONE WOULD LIKE TO BE (O or X):</h2>
-      <input type="text" id="playerOne">
-      <button class="buttonOne"></button>
-      <p></p>
+  <head>
+    <title>Noughts and Crosses</title>
+    <script src="jQuery-2.1.4.js"></script>
+    <script src="jQuery-ui-1.11.4.js"></script>
+    <script src="noughtsandcrosses.js"></script>
+    <link rel="stylesheet" type="text/css" href="noughtsandcrosses.css">
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <style type="text/css" media="screen, print">
+      @font-face {
+        font-family:"8 bit wonder";
+        src: url("8-BIT WONDER.TTF");
+      }
+    </style>
+  </head>
+  <body>
+    <div class="containerOne">
+      <h1>CABBAGE VERSUS CORN SHOWDOWN</h1>
+      <h2> ( Where cabbage, the less popular vegetable, starts )</h2>
     </div>
-    <div>
-      <h2>PLAYER TWO WOULD LIKE TO BE (O or X):</h2>
-      <input type="text" id="playerTwo">
-      <button class="buttonTwo"></button>
-      <p></p>
-    </div>
-  </div> -->
   
-
-  <div class="containerTwo">
-    <div class="firstRow">
-      <button class="gridBox" id="one"></button>
-      <button class="gridBox" id="two"></button>
-      <button class="gridBox" id="three"></button>
+    <div class="containerTwo">
+      <div class="firstRow">
+        <button class="gridBox" id="one"></button>
+        <button class="gridBox" id="two"></button>
+        <button class="gridBox" id="three"></button>
+      </div>
+      <div class="secondRow">
+        <button class="gridBox" id="four"></button> 
+        <button class="gridBox" id="five"></button>  
+        <button class="gridBox" id="six"></button> 
+      </div>
+      <div class="thirdRow">
+        <button class="gridBox" id="seven"></button>
+        <button class="gridBox" id="eight"></button>
+        <button class="gridBox" id="nine"></button>  
+      </div>
     </div>
-    <div class="secondRow">
-      <button class="gridBox" id="four"></button> 
-      <button class="gridBox" id="five"></button>  <button class="gridBox" id="six"></button> 
-    </div>
-   <div class="thirdRow">
-      <button class="gridBox" id="seven"></button>
-      <button class="gridBox" id="eight"></button>
-      <button class="gridBox" id="nine"></button>  
-    </div>
-  </div>
   
     <dialog class="cabbageWins">
       <p>CABBAGE WINS! Corn, you got cole-slawtered</p>
     </dialog>
+
     <dialog class="cornWins">
       <p>CORN WINS! Cabbage, looks like you are going through a bad patch</p> 
     </dialog>  
 
-</body>
+  </body>
 </html>

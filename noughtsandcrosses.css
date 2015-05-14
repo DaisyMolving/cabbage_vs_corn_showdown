@@ -20,9 +20,9 @@
 }
 
 h1 {
-  font-family: 'PT Sans', sans-serif;
+  font-family: "8 bit wonder", sans-serif;
   color: orange;
-  font-size: 50px;
+  font-size: 40px;
   text-align: center;
   background-color: rgba(72,174,35,0.75);
   background-position: center;
@@ -37,17 +37,24 @@ h1 {
 -1px 0px 0 #fff,
 4px 4px 3px #000;
 margin: 5px;
-width: 860px;
+width: 730px;
+height: 90px;
+padding: 10px;
+margin: 10px;
+vertical-align: center;
 }
 
 h2 {
-  font-family: 'PT Sans', sans-serif;
+  font-family: "8 bit wonder", sans-serif;
+  font-size:16px;
   text-align: center;
   background-color: rgba(253,164,30,0.5);
   background-position: center;
   display: inline-block;
   text-shadow:0px 0px 10px orange;
-  width: 560px;
+  width: 435px;
+  height: 40px;
+  padding: 7px;
 }
 
 

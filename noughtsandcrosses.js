@@ -13,6 +13,7 @@ function openDialogCorn(){
   $( ".cornWins" ).dialog();
 }
 
+
 var turn = -1;
 var numberOfTurns = 0;
 
@@ -84,35 +85,6 @@ var gridPosition = ["","","","","","","","",""];
     winnerTest();
   });
 
-// function drawTest() {
-//   gridPosition(function(element, i){
-//      var sumOfAll = element.reduce(function(a, b) {
-//         console.log(sumOfAll)
-//         return (a+b);
-//     });
-
-// });
-// }
-
-
-// horizontalTop = [gridPosition[0], gridPosition[1], gridPosition[2]];
-// horizontalMiddle = [gridPosition[3], gridPosition[4], gridPosition[5]];
-// horizontalBottom = [gridPosition[6], gridPosition[7], gridPosition[8]];
-// verticalLeft = [gridPosition[0], gridPosition[3], gridPosition[6]];
-// verticalMiddle = [gridPosition[1], gridPosition[4], gridPosition[7]];
-// verticalRight = [gridPosition[2], gridPosition[5], gridPosition[8]];
-// diagonalLeftTop = [gridPosition[0], gridPosition[4], gridPosition[8]];
-// diagonalRightTop = [gridPosition[2], gridPosition[4], gridPosition[6]];
-
-
-
-// threeInRow[0].reduce(function(a, b) {
-//     return parseInt(a, 10) + parseInt(b, 10);
-// })
-
-// function openDialogCabbage () {
-//   $(".cabbageWins").dialog.open();
-// }
 
 function winnerTest(){
   var sum;
@@ -130,14 +102,7 @@ function winnerTest(){
      sum = element.reduce(function(a, b) {
         return (a+b);
     });
-
-// function drawTest() {
-//   gridPosition(function(element, i){
-//      var sumOfAll = element.reduce(function(a, b) {
-//         console.log(sumOfAll)
-//         return (a+b);
-//      }
-//      });   
+ 
      if (sum === 3){
      openDialogCabbage();
      } else if (sum === -3){
@@ -149,19 +114,5 @@ function winnerTest(){
       alert("nobody has won");
      }
 }
-
-
-  // else if (threeInRow === 3) {
-  //   console.log("o wins");
-  // }
-//winning array combos:
-// [0, 1, 2]
-// [3, 4, 5]
-// [6, 7, 8]
-// [0, 3, 6]
-// [1, 4, 7]
-// [2, 5, 8]
-// [0, 4, 8]
-// [6, 4, 2]
 
 });
