@@ -9,8 +9,14 @@
     <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
     <style type="text/css" media="screen, print">
       @font-face {
-        font-family:"8 bit wonder";
-        src: url("8-BIT WONDER.TTF");
+        font-family:"silkscreen";
+        src: url("slkscr.ttf");
+      }
+    </style>
+    <style type="text/css" media="screen, print">
+      @font-face {
+        font-family:"silkscreen-bold";
+        src: url("slkscrb.ttf");
       }
     </style>
   </head>
@@ -38,13 +44,42 @@
       </div>
     </div>
   
-    <dialog class="cabbageWins">
-      <p>CABBAGE WINS! Corn, you got cole-slawtered</p>
-    </dialog>
-
+  <!--  
     <dialog class="cornWins">
       <p>CORN WINS! Cabbage, looks like you are going through a bad patch</p> 
-    </dialog>  
+    </dialog> -->
+
+   
+    <div class="hidden" id="cabbageWins">
+      <p>
+        
+    CABBAGE WINS!   <br> 
+                    <br>Corn, you just got 
+                    <br>.
+                    <br><strong>COLE-SLAWTERED</strong>
+                    <br>.
+                    <br>
+      </p>
+    </div>
+
+    <div class="hidden" id="cornWins">
+      <p>
+        
+    CORN WINS!  <br>
+                <br>Cabbage, looks like you are going through a 
+                <br>.
+                <br><strong>BAD PATCH</strong>
+                <br>.
+                <br>
+      </p>
+    </div>
+
+     <div class="hidden" id="noOneWins">
+      <p>    
+    NOBODY WON THIS TIME... 
+      </p>
+    </div>
+  
 
   </body>
 </html>

@@ -1,18 +1,5 @@
 $(document).ready(function(){
 
-// var openDialogCabbage = $( ".cabbageWins" ).dialog( "option", "modal" );
-
-
-function openDialogCabbage(){
-  $( ".cabbageWins" ).dialog();
-}
-
-// var openDialogCorn = $( ".cornWins" ).dialog( "option", "modal" );
-
-function openDialogCorn(){
-  $( ".cornWins" ).dialog();
-}
-
 
 var turn = -1;
 var numberOfTurns = 0;
@@ -102,16 +89,81 @@ function winnerTest(){
      sum = element.reduce(function(a, b) {
         return (a+b);
     });
+
+    // var openDialogCabbage = $( ".cabbageWins" ).dialog( "option", "modal" );
+
+
+
+function openDialogCabbage(){
+  $("#cabbageWins").dialog({
+    height: 250
+  });
+  $( "#cabbageWins" ).dialog({
+  buttons: [
+    {
+      text: "PLAY AGAIN?",
+      click: function() {
+        $( this ).dialog( "close");
+    }
+  }
+  ]
+});
+   $( "#cabbageWins" ).dialog({
+  modal: true
+});
+}
+
+// var openDialogCorn = $( ".cornWins" ).dialog( "option", "modal" );
+
+function openDialogCorn(){
+  $("#cornWins").dialog({
+    height: 300
+  });
+  $( "#cornWins" ).dialog({
+  buttons: [
+    {
+      text: "PLAY AGAIN?",
+      click: function() {
+        $( this ).dialog( "close");
+    } 
+  }
+  ]
+});
+   $( "#cornWins" ).dialog({
+  modal: true
+});
+}
+
+ 
  
      if (sum === 3){
-     openDialogCabbage();
+      openDialogCabbage();
      } else if (sum === -3){
-       openDialogCorn();
+      openDialogCorn();
      } 
 
   }); 
+
+function openDialogDraw(){
+  $("#noOneWins").dialog({
+    height: 300
+  });
+  $( "#noOneWins" ).dialog({
+  buttons: [
+    {
+      text: "PLAY AGAIN?",
+      click: function() {
+        $( this ).dialog( "close");
+    } 
+    } 
+    ]
+});
+  $( "#noOneWins" ).dialog({
+  modal: true
+});
+}
   if (numberOfTurns === 9 && sum !== 3 && sum !== -3) {
-      alert("nobody has won");
+      openDialogDraw();
      }
 }
 
