@@ -1,5 +1,10 @@
-.container {
+.containerOne {
   text-align: center;
+}
+
+.containerTwo {
+  text-align: center;
+  background-position: center;
 }
 
 .gridBox {
@@ -20,6 +25,7 @@ h1 {
   font-size: 50px;
   text-align: center;
   background-color: rgba(72,174,35,0.75);
+  background-position: center;
   display: inline-block;
   text-shadow:1px 1px 0 #fff,
 -1px -1px 0 #fff,
@@ -38,12 +44,30 @@ h2 {
   font-family: 'PT Sans', sans-serif;
   text-align: center;
   background-color: rgba(253,164,30,0.5);
+  background-position: center;
   display: inline-block;
   text-shadow:0px 0px 10px orange;
+  width: 560px;
 }
+
 
 body {
   background-image: url(spade_and_rake.png);
   background-repeat: repeat;
   background-color: rgb(101,196,52);
 }
+
+.cabbageWins {
+  height: 640px;
+  width: 860px;
+}
+
+.cornWins {
+  height: 640px;
+  width: 860px;
+}
+
+
+
+
+
